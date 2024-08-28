@@ -24,4 +24,30 @@ function multiply (firstnumber:number, secondnumber?:number, base:number = 6){
 }
 const multiplyResult = multiply(4);
 console.log({multiplyResult});
+
+
+// funciones
+
+interface Character {
+    name: string;
+    hp: number;
+    showHp: () => void;
+}
+
+const heaalCharacter = (character:Character, amount:number) => {
+
+    character.hp += amount;
+    
+}
+
+const strider: Character = {
+    name: 'strider',
+    hp:50,
+    showHp (){
+        console.log (`puntos de vida ${this.hp}`);
+    },
+}
+heaalCharacter(strider, 100)
+strider.showHp();
+
 export {}
